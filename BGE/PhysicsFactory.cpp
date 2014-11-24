@@ -142,8 +142,9 @@ shared_ptr<PhysicsController> PhysicsFactory::CreateBox(float width, float heigh
 	if (kinematic)
 	{
 		body->setCollisionFlags(body->getCollisionFlags() | btCollisionObject::CF_KINEMATIC_OBJECT);
-		body->setActivationState(DISABLE_DEACTIVATION);
+		
 	}
+	body->setActivationState(DISABLE_DEACTIVATION);
 	dynamicsWorld->addRigidBody(body);
 
 	// Create the physics component and add it to the box

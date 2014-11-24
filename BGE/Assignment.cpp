@@ -15,7 +15,6 @@
 #include "VectorDrawer.h"
 #include "Utils.h"
 
-
 using namespace BGE;
 
 Assignment::Assignment(void)
@@ -35,36 +34,36 @@ bool Assignment::Initialise()
 
 	setGravity(glm::vec3(0, -9, 0));
 
-	size = 8;
-	height = 8;
-	width = 8;
+	time = 0;
+	
+	shared_ptr<PhysicsController> SpiderBody = physicsFactory->CreateCapsule(2, 4.5f, glm::vec3(0, 15, 0), glm::quat());
 	
 
-	CreateWall(size, width, height);
+	shared_ptr<PhysicsController> leg1 = physicsFactory->CreateCapsule(0.6f, 1.5f, glm::vec3(15, 15, 0), glm::quat());
+	//shared_ptr<PhysicsController> leg2 = physicsFactory->CreateCapsule(0.6f, 1.5f, glm::vec3(10, 15, 0), glm::quat());
 
+	btHingeConstraint * hinge = new btHingeConstraint(*SpiderBody->rigidBody, *leg1->rigidBody, btVector3(0, 0, 4.5f), btVector3(0, 0, -4.5f), btVector3(1, 0, 0), btVector3(1, 0, 0), true);
+	hinge->setLimit(glm::radians(90.0f), glm::radians(90.0f));
+	dynamicsWorld->addConstraint(hinge);
 
 	if (!Game::Initialise()) {
 		return false;
 	}
 
-
+	
 
 	return true;
 }
-
-void BGE::Assignment::CreateWall(int size, int width, int height)
-{
-	for (int i = 0; i < height; i++)
-	{
-		for (int y = 0; y < width; y++)
-		{
-			shared_ptr<PhysicsController> box1 = physicsFactory->CreateBox(size, size, size, glm::vec3(30 + (y * size), 1 + (i * size), 0), glm::quat());
-		}
-	}
-}
+	
 
 void BGE::Assignment::Update()
 {
+	
+	time += Time::deltaTime;
+	
+	
+
+	
 
 	Game::Update();
 }
