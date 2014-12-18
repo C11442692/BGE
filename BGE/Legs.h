@@ -6,18 +6,17 @@
 
 namespace BGE
 {
-	class Assignment :
+	class Legs :
 		public Game
 	{
 	private:
 
 	public:
-		Assignment(void);
-		~Assignment(void);
+		Legs(void);
+		~Legs(void);
 		bool Initialise();
 		void Update();
 		void Cleanup();
-		void CreateWall(int, int, int);
 		int size;
 		int height;
 		int width;
@@ -25,17 +24,13 @@ namespace BGE
 		btHingeConstraint * flhinge;
 		btHingeConstraint * brhinge;
 		btHingeConstraint * blhinge;
-		btHingeConstraint * sidehinge;
-		btHingeConstraint * sidehinge2;
-		btHingeConstraint * offsidehinge;
-		btHingeConstraint * offsidehinge2;
 		btHingeConstraint * headhinge;
-		btHingeConstraint * ballhinge1;
-		btHingeConstraint * ballhinge2;
-		btHingeConstraint * ballhinge3;
-		btHingeConstraint * ballhinge4;
-		btFixedConstraint * connect;
-		btScalar force;
+
+		btHingeConstraint * fhinge1;
+		btHingeConstraint * fhinge2;
+		btHingeConstraint * fhinge3;
+		btHingeConstraint * fhinge4;
+
 		float time;
 	};
 }

@@ -6,14 +6,14 @@
 
 namespace BGE
 {
-	class Assignment :
+	class RollBot :
 		public Game
 	{
 	private:
 
 	public:
-		Assignment(void);
-		~Assignment(void);
+		RollBot(void);
+		~RollBot(void);
 		bool Initialise();
 		void Update();
 		void Cleanup();
@@ -34,7 +34,6 @@ namespace BGE
 		btHingeConstraint * ballhinge2;
 		btHingeConstraint * ballhinge3;
 		btHingeConstraint * ballhinge4;
-		btFixedConstraint * connect;
 		btScalar force;
 		float time;
 	};

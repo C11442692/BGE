@@ -42,6 +42,11 @@
 #include "VRGame2.h"
 #include "SDL_syswm.h"
 #include "Assignment.h"
+#include "Roller.h"
+#include "RollBot.h"
+#include "Legs.h"
+#include "BoogieBot.h"
+
 
 using namespace BGE;
 
@@ -50,7 +55,7 @@ int main(int argc, char *argv[])
 	// http://www.youtube.com/watch?v=EEbVHxOkTxw
 	Params::Load("default");
 
-	shared_ptr<Game> game = make_shared<Assignment>();
+	shared_ptr<Game> game = make_shared<BoogieBot>();
 	game->Run();
 	
 	return 0;

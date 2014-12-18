@@ -47,8 +47,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\Bryan\Documents\Projects\BGE\Dependencies\LeapSDK\include;..\Dependencies\FMOD\inc;..\Dependencies\SDL2-2.0.3\include;..\Dependencies\glew-1.10.0\include;..\Dependencies\glm-0.9.4.3\glm;..\Dependencies\SDL_ttf;..\Dependencies\bullet3\src;..\Dependencies\LibOVR\Include;..\Dependencies\Kinect\v2.0\inc;..\Dependencies\Speech\v11.0\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Bryan\Documents\Projects\BGE\Dependencies\LeapSDK\lib\x86;..\Dependencies\Speech\v11.0\Include;..\Dependencies\FMOD\lib;..\Dependencies\LibOVR\Lib\Win32\VS2013;..\Dependencies\SDL2-2.0.3\lib\x86;..\Dependencies\SDL_ttf\VisualC\Win32\Release;..\Dependencies\glew-1.10.0\lib\Release\Win32;..\Dependencies\bullet3\lib;..\Dependencies\Kinect\v2.0\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\Dependencies\LeapSDK\include;..\Dependencies\FMOD\inc;..\Dependencies\LibOVR\Include;..\Dependencies\SDL2-2.0.3\include;..\Dependencies\glew-1.10.0\include;..\Dependencies\glm-0.9.4.3\glm;..\Dependencies\SDL_ttf;..\Dependencies\bullet3\src;..\Dependencies\Kinect\v2.0\inc;..\Dependencies\Speech\v11.0\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Dependencies\LeapSDK\lib\x86;..\Dependencies\Speech\v11.0\Include;..\Dependencies\FMOD\lib;..\Dependencies\LibOVR\Lib\Win32\VS2013;..\Dependencies\SDL2-2.0.3\lib\x86;..\Dependencies\SDL_ttf\VisualC\Win32\Release;..\Dependencies\glew-1.10.0\lib\Release\Win32;..\Dependencies\bullet3\lib;..\Dependencies\Kinect\v2.0\Lib\x86;$(LibraryPath)</LibraryPath>
     <CustomBuildAfterTargets>
     </CustomBuildAfterTargets>
   </PropertyGroup>
@@ -101,6 +101,7 @@
   <ItemGroup>
     <ClCompile Include="Assignment.cpp" />
     <ClCompile Include="AttackingState.cpp" />
+    <ClCompile Include="BoogieBot.cpp" />
     <ClCompile Include="Buddha.cpp" />
     <ClCompile Include="Capsule.cpp" />
     <ClCompile Include="EmptyGame.cpp" />
@@ -115,12 +116,15 @@
     <ClCompile Include="Lab7.cpp" />
     <ClCompile Include="LazerBeam.cpp" />
     <ClCompile Include="LeapHands.cpp" />
+    <ClCompile Include="Legs.cpp" />
     <ClCompile Include="ObstacleAvoidanceScenario.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleEffect.cpp" />
     <ClCompile Include="PathFollowingScenario.cpp" />
     <ClCompile Include="Person2.cpp" />
     <ClCompile Include="PhysicsDrawer.cpp" />
+    <ClCompile Include="RollBot.cpp" />
+    <ClCompile Include="Roller.cpp" />
     <ClCompile Include="Route.cpp" />
     <ClCompile Include="Scenario.cpp" />
     <ClCompile Include="SceneGraphGame.cpp" />
@@ -165,6 +169,7 @@
   <ItemGroup>
     <ClInclude Include="Assignment.h" />
     <ClInclude Include="AttackingState.h" />
+    <ClInclude Include="BoogieBot.h" />
     <ClInclude Include="Buddha.h" />
     <ClInclude Include="Capsule.h" />
     <ClInclude Include="EmptyGame.h" />
@@ -179,11 +184,14 @@
     <ClInclude Include="Lab7.h" />
     <ClInclude Include="LazerBeam.h" />
     <ClInclude Include="LeapHands.h" />
+    <ClInclude Include="Legs.h" />
     <ClInclude Include="ObstacleAvoidanceScenario.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleEffect.h" />
     <ClInclude Include="PathFollowingScenario.h" />
     <ClInclude Include="Person2.h" />
+    <ClInclude Include="RollBot.h" />
+    <ClInclude Include="Roller.h" />
     <ClInclude Include="Route.h" />
     <ClInclude Include="Scenario.h" />
     <ClInclude Include="SceneGraphGame.h" />

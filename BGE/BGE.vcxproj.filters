@@ -230,6 +230,18 @@
     <ClCompile Include="Assignment.cpp">
       <Filter>Games</Filter>
     </ClCompile>
+    <ClCompile Include="Roller.cpp">
+      <Filter>Games</Filter>
+    </ClCompile>
+    <ClCompile Include="RollBot.cpp">
+      <Filter>Games</Filter>
+    </ClCompile>
+    <ClCompile Include="Legs.cpp">
+      <Filter>Games</Filter>
+    </ClCompile>
+    <ClCompile Include="BoogieBot.cpp">
+      <Filter>Games</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -411,6 +423,18 @@
     </ClInclude>
     <ClInclude Include="EmptyGame.h" />
     <ClInclude Include="Assignment.h">
+      <Filter>Games</Filter>
+    </ClInclude>
+    <ClInclude Include="Roller.h">
+      <Filter>Games</Filter>
+    </ClInclude>
+    <ClInclude Include="RollBot.h">
+      <Filter>Games</Filter>
+    </ClInclude>
+    <ClInclude Include="Legs.h">
+      <Filter>Games</Filter>
+    </ClInclude>
+    <ClInclude Include="BoogieBot.h">
       <Filter>Games</Filter>
     </ClInclude>
   </ItemGroup>
